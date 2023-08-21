@@ -4,7 +4,7 @@ const AxiosInstance = axios.create({
     baseURL:
     process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://main--euphonious-entremet-b35e7a.netlify.app/",
+    : "https://online-store-deploy.onrender.com/",
     timeout: 50000,
 })
 

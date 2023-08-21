@@ -12,7 +12,7 @@ function Article() {
   const { id } = useParams();
 
 
-  //this is the code that lets my delopy work but is an infinite loop
+  //this is the code that let my delopy work but is an infinite loop
   useEffect(() => {
     FetchArticleById();
   });
