@@ -9,23 +9,10 @@ function Comment() {
         handleDelete,
         viewEditToggleForm,
         setViewEditToggleForm,
-        comments
       } = useContext(CommentContext);
 
       function toggleView(e) {
         setViewEditToggleForm(!viewEditToggleForm);
-        // console.log(comment.id);
-
-        const foundIndex = comments.findIndex((item)=> {
-          return e.target.id == item.id
-        })
-        console.log(e.target.id);
-        console.log(foundIndex);
-        console.log(comments[foundIndex]);
-
-        comments[foundIndex] =
-        
-        setViewEditToggleForm()
       }
       
   return (

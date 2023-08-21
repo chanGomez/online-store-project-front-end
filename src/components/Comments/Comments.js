@@ -11,7 +11,7 @@ import {
 
 import { CommentContext } from "../Context/context";
 
-const API = process.env.REACT_APP_API_URL;
+// const API = process.env.REACT_APP_API_URL;
 
 function Comments() {
   const [comments, setComments] = useState([]);
@@ -22,7 +22,7 @@ function Comments() {
 
   useEffect(() => {
     fetchCommments();
-  }, [id, API]);
+  }, [id]);
 
   async function fetchCommments() {
     try {
@@ -103,7 +103,6 @@ function Comments() {
                         handleDelete: handleDelete,
                         viewEditToggleForm: viewEditToggleForm,
                         setViewEditToggleForm: setViewEditToggleForm,
-                        comments: comments
                       }}
                       key={item.id}
                     >
