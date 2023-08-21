@@ -1,0 +1,12 @@
+
+
+.form-label, .form-text{
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+}
+
+.form-text{
+    color: rgb(126, 126, 126);
+    font-size: small;
+}

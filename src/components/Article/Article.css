@@ -1,0 +1,14 @@
+.infoContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+img{
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.info{
+    
+}
