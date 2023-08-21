@@ -44,7 +44,7 @@ function Article() {
           <div className="infoContainer container">
             <div className="image">
               {" "}
-              <img src={article.url} alt="product"/>
+              <img className="img-article" src={article.url} alt="product"/>
             </div>
 
             <div className="info container">
