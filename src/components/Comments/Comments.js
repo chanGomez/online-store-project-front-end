@@ -22,6 +22,7 @@ function Comments() {
 
   useEffect(() => {
     fetchCommments();
+    // eslint-disable-next-line
   }, [id]);
 
   async function fetchCommments() {

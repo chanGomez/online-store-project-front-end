@@ -5,8 +5,7 @@ import "./Articles.css";
 import { getAllArticlesAPI } from "../API/API";
 
 function Articles() {
-  const [articleData, setArticleData] = useState([]);
-  const [name, setName] = useState("")
+  const [articleData, setArticleData] = useState([])
 
   async function fetchArticlesdata() {
     try {

@@ -1,8 +1,7 @@
 
 
 .form-label, .form-text{
-    display: flex;
-    justify-content: start;
+    display: flex-start;
     margin-left: 10px;
 }
 
