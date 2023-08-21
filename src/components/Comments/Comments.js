@@ -11,7 +11,7 @@ import {
 
 import { CommentContext } from "../Context/context";
 
-// const API = process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_URL;
 
 function Comments() {
   const [comments, setComments] = useState([]);
@@ -23,7 +23,7 @@ function Comments() {
   useEffect(() => {
     fetchCommments();
     // eslint-disable-next-line
-  }, [id]);
+  }, [id, API]);
 
   async function fetchCommments() {
     try {

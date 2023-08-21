@@ -13,7 +13,7 @@ function Article() {
 
   useEffect(() => {
     FetchArticleById();
-  }, []);
+  });
 
   async function FetchArticleById() {
     try {
@@ -44,7 +44,7 @@ function Article() {
           <div className="infoContainer container">
             <div className="image">
               {" "}
-              <img src={article.url} />
+              <img src={article.url} alt="product"/>
             </div>
 
             <div className="info container">
