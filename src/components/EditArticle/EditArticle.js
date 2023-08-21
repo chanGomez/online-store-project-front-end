@@ -31,7 +31,8 @@ function EditArticle() {
     };
 
     fetchArticle();
-  });
+        // eslint-disable-next-line
+  }, []);
 
   const handleTextChange = (e) => {
     setArticle({
