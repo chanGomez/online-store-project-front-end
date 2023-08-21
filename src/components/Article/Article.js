@@ -13,7 +13,7 @@ function Article() {
 
   useEffect(() => {
     FetchArticleById();
-  });
+  }, [id]);
 
   async function FetchArticleById() {
     try {
