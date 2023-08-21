@@ -31,7 +31,7 @@ function EditArticle() {
     };
 
     fetchArticle();
-  }, []);
+  });
 
   const handleTextChange = (e) => {
     setArticle({
