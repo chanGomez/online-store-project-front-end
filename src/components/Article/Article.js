@@ -11,9 +11,10 @@ function Article() {
 
   const { id } = useParams();
 
-  useEffect(() => {
-    FetchArticleById();
-  }, [id]);
+//this is the code that breaks my deploy
+  // useEffect(() => {
+  //   FetchArticleById();
+  // }, [id]);
 
   async function FetchArticleById() {
     try {
@@ -35,6 +36,12 @@ function Article() {
       console.log(error);
     }
   };
+
+    //this is the code that lets my delopy work but is an infinite loop
+  useEffect(() => {
+    FetchArticleById();
+    // eslint-disable-next-line
+  }, [id]);
 
   return (
     <div>
