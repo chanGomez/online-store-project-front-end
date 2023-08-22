@@ -7,7 +7,7 @@ function Home() {
     <div className="contain">
       <video src={video} autoPlay loop muted/>
       <div className="home-heading">
-        <h1>Welcome to ARTICLE.</h1>
+        <h1>ARTICLE</h1>
         <p> Online store for vintage clothing</p>
       </div>
     </div>

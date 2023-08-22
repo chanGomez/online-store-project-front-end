@@ -32,7 +32,7 @@ function Articles() {
             return (
               <li key={id}>
                 <div className="card" style={{ width: "12rem" }}>
-                  <img src={url} className="card-img-top" alt="..." />
+                  <img src={url} className="card-img-top" alt="..." style={{maxHeight: "230px"}}/>
                   <div className="card-body">
                     <Link to={`/articles/${id}`} style={{ fontWeight: "bold" }}>
                       {name.length > 15 ? (name.slice(0, 13) + "...") : ( name)}
