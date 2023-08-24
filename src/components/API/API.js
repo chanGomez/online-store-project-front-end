@@ -69,10 +69,10 @@ async function createCommentAPI(id, newComment) {
   }
 }
 
-async function updateCommentAPI(id, updatedCommentId, updatedComment) {
+async function updateCommentAPI(id, commentId, updatedComment) {
   try {
     let result = await Axios.put(
-      `/articles/${id}/comments/${updatedCommentId}`,
+      `/articles/${id}/comments/${commentId}`,
       updatedComment
     );
 

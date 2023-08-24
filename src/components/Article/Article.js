@@ -11,13 +11,13 @@ function Article() {
 
   const { id } = useParams();
 
-
   //this is the code that let my delopy work but is an infinite loop
   useEffect(() => {
     FetchArticleById();
-  });
+    // eslint-disable-next-line
+  }, [id]);
 
-//this is the code that breaks my deploy
+  //this is the code that breaks my deploy
   // useEffect(() => {
   //   FetchArticleById();
   // }, [id]);
@@ -47,37 +47,44 @@ function Article() {
     <div>
       {article && (
         <div id="article" className="container">
-          
-          <div className="infoContainer container">
+          <div className="imageAndInfo container">
             <div className="image">
               {" "}
-              <img className="img-article" src={article.url} alt="product"/>
+              <img
+                className="img-article"
+                src={article.url}
+                alt="product"
+                style={{ maxWidth: "150px" }}
+              />
             </div>
 
-            <div className="info container">
-              <p>name: {article.name}</p>
-              <p>Size: {article.size}</p>
-              <p>category: {article.category}</p>
-              <p>category: {article.condition}</p>
-              <p>category: {article.gender}</p>
-              <p>category: {article.color}</p>
-              <p>category: {article.discription}</p>
-              <p>category: {article.price}</p>
+            <div className=" info">
+              <p style={{ fontWeight: "bold" }}>{article.name}</p>
+              <p>${article.price}</p>
+              <div className="info-container">
+                <p style={{ fontWeight: "bold" }}>{article.size} • </p>
+                <p>{article.category} • </p><p>{article.condition} • </p>
+                <p>{article.gender}  • </p><p>{article.color}</p>
+              </div>
+              <hr className="below-detail-row"></hr>
+              <p>{article.discription}</p>
             </div>
           </div>
+          <hr></hr>
 
           <div className="buttons">
+          <button className="button-59" onClick={() => navigate("/articles")}>Back</button>
             <Link to={`/articles/${id}/edit`}>
               {" "}
-              <button>Edit</button>
+              <button className="button-59">Edit</button>
             </Link>
-            <button onClick={() => deleteArticle()}>Delete</button>
-            <button onClick={() => navigate("/articles")}>Back</button>
+            <button className="button-59" onClick={() => deleteArticle()}>Delete</button>
           </div>
         </div>
       )}
-
-      <Comments />
+      <div className="comments">
+        <Comments />
+      </div>
     </div>
   );
 }

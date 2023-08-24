@@ -22,3 +22,7 @@
     border-style: double;
     border-color: #ccc transparent;
   }
+  
+  .loading-p{
+    color: #8a8a8a;
+  }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Overlay from "../Overlay/Overlay";
+import Overlays from "../Overlay/Overlays";
 import "./Articles.css";
 
 import { getAllArticlesAPI } from "../API/API";
@@ -69,7 +69,7 @@ function Articles() {
   }
 
   return (
-    <Overlay isLoading={isLoading}>
+    <Overlays isLoading={isLoading}>
       <div>
         {/* code below will display text be */}
         {articleData.length === 0 ? (
@@ -79,7 +79,7 @@ function Articles() {
         )}
         {/* {showData()} */}
       </div>
-    </Overlay>
+    </Overlays>
   );
 }
 

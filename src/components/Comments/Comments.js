@@ -88,13 +88,15 @@ function Comments() {
   }
 
   return (
-    <section className="Comments">
-      <h2>Thoughts</h2>
-      <CommentForm fromParentCommentsHandleSubmit={handleAdd}>
-        <h3>Add a New Comment</h3>
-      </CommentForm>
-
-      {comments.length === 0 ? (<p>no comments yet</p>):(
+    <section>
+  <div class="container my-5 py-5 text-dark">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xl-8">
+        <div class="d-flex justify-content-center align-items-center mb-4">
+          <div class="card" style={{width:"45rem"}}>
+          <h2>Thoughts</h2>
+          
+      {comments.length === 0 ? (<p style={{color:"#C0C0C0"}}>no comments yet</p>):(
                 comments.map((item) => {
                   return (
                     <CommentContext.Provider
@@ -112,7 +114,17 @@ function Comments() {
                   );
                 }
       ))}
-    </section>
+            <CommentForm fromParentCommentsHandleSubmit={handleAdd}>
+        <h3>Add a New Comment</h3>
+      </CommentForm>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   );
 }
 

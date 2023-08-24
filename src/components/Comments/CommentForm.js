@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./CommentFrom.css"
 
 function CommentForm(props) {
     let { id } = useParams();
@@ -34,11 +35,13 @@ function CommentForm(props) {
         });
       }
   return (
-    <div className="Edit">
+    <div className="form">
       {props.children}
       <form onSubmit={handleSubmit}>
-        <label htmlFor="commenter"> Name:</label>
+      <div className="form-group">
+        <label htmlFor="commenter"> Name</label>
         <input
+        className="form-control"
           required
           type="text"
           id="commenter"
@@ -46,8 +49,11 @@ function CommentForm(props) {
           value={comment.commenter}
           onChange={handleTextChange}
         />
-        <label htmlFor="content"> Comment:</label>
+        </div>
+        <div className="form-group">
+        <label htmlFor="content"> Comment</label>
         <textarea
+        className="form-control"
           required
           type="text"
           id="content"
@@ -56,9 +62,10 @@ function CommentForm(props) {
           value={comment.content}
           onChange={handleTextChange}
         />
+        </div>
 
         <br />
-        <input type="submit" />
+        <button className="button-59">Submit</button>
       </form>
     </div>
   );
