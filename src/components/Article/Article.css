@@ -1,7 +1,7 @@
 .imageAndInfo{
     display: flex;
     justify-content: space-around;
-    margin: 30px;
+    margin: 50px;
 }
 
 .img-article{
@@ -13,14 +13,20 @@
 justify-items: center;
 }
 
-.info-container{
+.single-info{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+}
+
+p{
+padding-right: 5px;
 }
 
 .info{
     text-align: left;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    max-width: 350px;
+    min-width: 350px;
 }
 .below-detail-row{
     margin-top: -5px;

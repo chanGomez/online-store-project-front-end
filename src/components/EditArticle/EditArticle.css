@@ -65,3 +65,8 @@
 .formLabel{
     text-align: left;
 }
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { getArticleByIdAPI, updateArticleByIdAPI } from "../API/API";
 import "./EditArticle";
 
@@ -172,9 +172,13 @@ function EditArticle() {
               value={article.url}
             />
           </div>
-          <button className="button-59">
-            Submit
-          </button>
+          <div className="buttons">
+            <Link to={`/articles/${id}`}>
+              {" "}
+              <button className="button-59">Back</button>
+            </Link>
+            <button className="button-59">Submit</button>
+          </div>
         </form>
       </div>
     </div>

@@ -58,15 +58,36 @@ function Article() {
               />
             </div>
 
-            <div className=" info">
-              <p style={{ fontWeight: "bold" }}>{article.name}</p>
-              <p>${article.price}</p>
+            <div className="info">
+              <h3 style={{ fontWeight: "bold" }}>{article.name}</h3>
               <div className="info-container">
-                <p style={{ fontWeight: "bold" }}>{article.size} • </p>
-                <p>{article.category} • </p><p>{article.condition} • </p>
-                <p>{article.gender}  • </p><p>{article.color}</p>
+                <div className="single-info">
+                <p style={{ fontWeight: "bold" }}>Size </p>
+                <p> {article.size}</p>
+                </div>
+                <div className="single-info">
+                <p style={{ fontWeight: "bold" }}>Category </p>
+                <p>{article.category} </p>
+                </div>
+                <div className="single-info">
+                <p style={{ fontWeight: "bold" }}> Condition </p>
+                <p>{article.condition} </p>
+                </div>
+                <div className="single-info">
+                <p style={{ fontWeight: "bold" }}> Gender </p>
+                <p>{article.gender}  </p>
+                </div>
+                <div className="single-info">
+                <p style={{ fontWeight: "bold" }}> Color </p>
+                <p>{article.color}</p>
+                </div>
+                <div className="single-info">
+                <p style={{ fontWeight: "bold" }}>${article.price}</p>
+                </div>
+                
               </div>
               <hr className="below-detail-row"></hr>
+              <p style={{fontWeight:"bold"}}>Discription</p>
               <p>{article.discription}</p>
             </div>
           </div>
