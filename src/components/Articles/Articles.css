@@ -1,4 +1,4 @@
-ul{
+.articles-list{
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -41,3 +41,13 @@ a.card-body{
 
 }
 
+/* .filter-section{
+  margin: 50px;
+  border: solid 1px rgb(223, 223, 223);
+  max-width: 200px;
+  border-radius: 3px;
+} */
+.main-article-section{
+  display: flex;
+  justify-content: center;
+}

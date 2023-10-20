@@ -7,6 +7,8 @@ const Nav = React.lazy(() => import("./components/Nav/Nav"));
 const Home = React.lazy(() => import("./components/Home/Home"));
 const Article = React.lazy(() => import("./components/Article/Article"));
 const Articles = React.lazy(() => import("./components/Articles/Articles"));
+const Explore = React.lazy(() => import("./components/Explore/Explore"));
+// const Filter = React.lazy(() => import("./components/Filter/Filter"));
 const NewArticle = React.lazy(() => import("./components/NewArticle/NewArticle"));
 const EditArticle = React.lazy(() => import("./components/EditArticle/EditArticle"));
 
@@ -20,7 +22,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<Articles />} />
+          <Route path="/articles" element={<Explore />} />
           <Route path="/articles/:id" element={<Article />} />
           <Route path="/articles/:id/edit" element={<EditArticle />} />
           <Route path="/new-article" element={<NewArticle />} />

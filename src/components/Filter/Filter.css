@@ -1,0 +1,28 @@
+.filter-section{
+  margin: 50px;
+  border: solid 1px rgb(223, 223, 223);
+  /* max-width: 200px; */
+   width: 230px;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+h5{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: bold;
+}

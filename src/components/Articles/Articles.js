@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Overlays from "../Overlay/Overlays";
 import "./Articles.css";
 
+
 import { getAllArticlesAPI } from "../API/API";
 
 function Articles() {
@@ -28,12 +29,11 @@ function Articles() {
     }
   }
 
-
   function showData() {
     return (
       <div className="container">
         <h2 className="heading"> ALL POSTINGS OF VINTAGE CLOTHING</h2>
-        <ul>
+        <ul className="articles-list">
           {articleData.map(({ id, name, url, price, discription, size }) => {
             return (
               <li key={id}>
@@ -70,14 +70,17 @@ function Articles() {
 
   return (
     <Overlays isLoading={isLoading}>
-      <div>
-        {/* code below will display text be */}
-        {articleData.length === 0 ? (
-          <div>Please go create some Posts</div>
-        ) : (
-          showData()
-        )}
-        {/* {showData()} */}
+      <div className="main-article-section">
+        {/* <div className="container filter-section">
+          <Filter />
+        </div> */}
+        <div className="article-section">
+          {articleData.length === 0 ? (
+            <div>Please go create some Posts</div>
+          ) : (
+            showData()
+          )}
+        </div>
       </div>
     </Overlays>
   );
